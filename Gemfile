@@ -1,5 +1,4 @@
-# A sample Gemfile
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-gem "jekyll"
-gem 'jekyll-sitemap'
+source "https://rubygems.org"
+gemspec
