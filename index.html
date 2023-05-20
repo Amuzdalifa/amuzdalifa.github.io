@@ -1,17 +1,23 @@
 ---
-# Under Construction
-layout: under_construction
-show_nav: false
-show_footer: false
-background: assets/img/flowers.jpg
-
-# Published
-# layout: default
-# include: our_story.html
-# invisible_nav: true
+layout: base
 ---
+<div class="wrapper">
+    <header>
+        {% if site.compass.logo %}
+        <div class="logo-container">
+          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
+        </div>
+        {% endif %}
 
-{% include banners.html %}
-{% if page.include %}
-  {% include {{ page.include }} %}
-{% endif %}
+        {% if site.compass.author %}
+        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
+        {% endif %}
+    </header>
+    <main>
+      {% if site.compass.include_content %}
+      <div class="content">
+        {% include content.html %}
+      </div>
+      {% endif %}
+    </main>
+</div>
