@@ -178,7 +178,7 @@
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<h1>Galih & Ifa</h1>
 						<p>Kepada Bapak/Ibu/Saudara/i</p>
-						<p style="font-weight: bolder;" id="id-group">Pematang Indonesia</p>
+						<p style="font-weight: bolder;" id="id-group"></p>
 						<p>Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</p>
 
 						<button class="btn btn-primary" id="open-invitation">Buka Undangan</button>
@@ -394,58 +394,6 @@
 		</div>
 	</div>
 
-	<!--<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="display-t">
-                    <div class="display-tc">
-                        <div class="col-md-3 col-sm-6 animate-box">
-                            <div class="feature-center">
-                            <span class="icon">
-                                <i class="icon-users"></i>
-                            </span>
-
-                                <span class="counter js-counter" data-from="0" data-to="500" data-speed="5000" data-refresh-interval="50">1</span>
-                                <span class="counter-label">Estimated Guest</span>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 animate-box">
-                            <div class="feature-center">
-                            <span class="icon">
-                                <i class="icon-user"></i>
-                            </span>
-
-                                <span class="counter js-counter" data-from="0" data-to="1000" data-speed="5000" data-refresh-interval="50">1</span>
-                                <span class="counter-label">We Catter</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 animate-box">
-                            <div class="feature-center">
-                            <span class="icon">
-                                <i class="icon-calendar"></i>
-                            </span>
-                                <span class="counter js-counter" data-from="0" data-to="402" data-speed="5000" data-refresh-interval="50">1</span>
-                                <span class="counter-label">Events Done</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 animate-box">
-                            <div class="feature-center">
-                            <span class="icon">
-                                <i class="icon-clock"></i>
-                            </span>
-
-                                <span class="counter js-counter" data-from="0" data-to="2345" data-speed="5000" data-refresh-interval="50">1</span>
-                                <span class="counter-label">Hours Spent</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
 	<div id="fh5co-ayat">
 		<!--<img height="400" width="100%" style="top: 0" src="images/background/wave-up.svg">-->
 		<!-- <img height="400" width="100%" style="position: absolute; bottom: -175px" src="images/background/wave-down.svg"> -->
@@ -487,48 +435,6 @@
 					</div>
 				</div>
 			</div>
-			<!--<div class="row">
-                <div class="col-md-12 animate-box">
-                    <div class="wrap-testimony">
-                        <div class="owl-carousel-fullwidth">
-                            <div class="item">
-                                <div class="testimony-slide active text-center">
-                                    <figure>
-                                        <img src="images/couple-1.jpg" alt="user">
-                                    </figure>
-                                    <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                    <blockquote>
-                                        <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"</p>
-                                    </blockquote>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimony-slide active text-center">
-                                    <figure>
-                                        <img src="images/couple-2.jpg" alt="user">
-                                    </figure>
-                                    <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                    <blockquote>
-                                        <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, at the coast of the Semantics, a large language ocean."</p>
-                                    </blockquote>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimony-slide active text-center">
-                                    <figure>
-                                        <img src="images/couple-3.jpg" alt="user">
-                                    </figure>
-                                    <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                    <blockquote>
-                                        <p>"Far far away, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-
 			
 		</div>
 	</div>
@@ -726,7 +632,7 @@
 
 	const urlParams = new URLSearchParams(window.location.search);
 	const to = urlParams.get('to');
-	console.log(to);
+	$('#id-group').val(to)
 
 
 	/********************** Copy to Clipboard **********************/
@@ -852,99 +758,6 @@
 		else
 			window.open("https://www.google.com/maps?daddr=graha+asia");
 	}
-</script>
-
-<script type="text/javascript">
-	const lgContainer = document.getElementById('inline-gallery-container');
-	const inlineGallery = lightGallery(lgContainer, {
-		container: lgContainer,
-		dynamic: true,
-		thumbnail : true,
-		// Turn off hash plugin in case if you are using it
-		// as we don't want to change the url on slide change
-		hash: false,
-		// Do not allow users to close the gallery
-		closable: false,
-		// Add maximize icon to enlarge the gallery
-		showMaximizeIcon: true,
-		download : false,
-		// Append caption inside the slide item
-		// to apply some animation for the captions (Optional)
-		appendSubHtmlTo: '.lg-item',
-		// Delay slide transition to complete captions animations
-		// before navigating to different slides (Optional)
-		// You can find caption animation demo on the captions demo page
-		slideDelay: 400,
-		dynamicEl: [
-			{
-				src: 'images/gallery/20211107182627_IMG_5230.jpg-1024x.jpg',
-				thumb: 'images/gallery/20211107182627_IMG_5230.jpg-1024x.jpg',
-				/*subHtml: `<div class="lightGallery-captions">
-					<h4>Caption 1</h4>
-					<p>Description of the slide 1</p>
-				</div>`,*/
-			},{
-				src: 'images/gallery/IMG_9958.JPG-1024x.jpg',
-				thumb: 'images/gallery/IMG_9958.JPG-1024x.jpg',
-				/*subHtml: `<div class="lightGallery-captions">
-					<h4>Caption 1</h4>
-					<p>Description of the slide 1</p>
-				</div>`,*/
-			},{
-				src: 'images/gallery/molid.jpg-1024x.jpg',
-				thumb: 'images/gallery/molid.jpg-1024x.jpg',
-				/*subHtml: `<div class="lightGallery-captions">
-					<h4>Caption 1</h4>
-					<p>Description of the slide 1</p>
-				</div>`,*/
-			},{
-				src: 'images/gallery/rehan.jpg-1024x.jpg',
-				thumb: 'images/gallery/rehan.jpg-1024x.jpg',
-				/*subHtml: `<div class="lightGallery-captions">
-					<h4>Caption 1</h4>
-					<p>Description of the slide 1</p>
-				</div>`,*/
-			},{
-				src: 'images/gallery/ring-3.JPG-1024x.jpg',
-				thumb: 'images/gallery/ring-3.JPG-1024x.jpg',
-				/*subHtml: `<div class="lightGallery-captions">
-					<h4>Caption 1</h4>
-					<p>Description of the slide 1</p>
-				</div>`,*/
-			},{
-				src: 'images/gallery/20211107181957_IMG_5207.jpg-1024x.jpg',
-				thumb: 'images/gallery/20211107181957_IMG_5207.jpg-1024x.jpg',
-				/*subHtml: `<div class="lightGallery-captions">
-					<h4>Caption 1</h4>
-					<p>Description of the slide 1</p>
-				</div>`,*/
-			},{
-				src: 'images/gallery/IMG_9797.JPG-1024x.jpg',
-				thumb: 'images/gallery/IMG_9797.JPG-1024x.jpg',
-				/*subHtml: `<div class="lightGallery-captions">
-					<h4>Caption 1</h4>
-					<p>Description of the slide 1</p>
-				</div>`,*/
-			},{
-				src: 'images/gallery/IMG_9802.JPG-1024x.jpg',
-				thumb: 'images/gallery/IMG_9802.JPG-1024x.jpg',
-				/*subHtml: `<div class="lightGallery-captions">
-					<h4>Caption 1</h4>
-					<p>Description of the slide 1</p>
-				</div>`,*/
-			},{
-				src: 'images/gallery/IMG_9787-1024x.jpg',
-				thumb: 'images/gallery/IMG_9787-1024x.jpg',
-				/*subHtml: `<div class="lightGallery-captions">
-					<h4>Caption 1</h4>
-					<p>Description of the slide 1</p>
-				</div>`,*/
-			},
-		],
-	});
-
-	// Since we are using dynamic mode, we need to programmatically open lightGallery
-	inlineGallery.openGallery();
 </script>
 
 </body>
