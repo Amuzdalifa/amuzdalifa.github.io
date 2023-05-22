@@ -127,27 +127,13 @@
         </div>
     </nav>-->
 
-	<!--<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center">
-                    <div class="display-t">
-                        <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                            <h1>Joefrey &amp; Sheila</h1>
-                            <h2>We Are Getting Married</h2>
-                            <div class="simply-countdown simply-countdown-one"></div>
-                            <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>-->
 
 	<!--Floating button-->
 	<div id="floating-button" class="float">
 		<div class="control-center open">
+			<div class="audio-play" style="background-color: #C8A855;">
+				<div data-video="QZng89VxKWg" data-autoplay="0" data-loop="1" id="youtube-audio1"><img src="images/audio/play.png"/></div>
+			</div>
 			<ul class="right-sidebar">
 				<!--gallery-->
 				<li onclick="scrollToElement('fh5co-gallery')" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABKklEQVRIidWVq04DQRhGv900QUFFCVWgUYQ6PAgeAUVwSDwplocoCamsqKlE4ICQECDlAfAYoAoDHEQ7SdnO7lw6CE6yYi45384/kxnpv5NVDQJ1SXuSdiVtSGpOhl4kDSVdSOplWTYKSgVqwAnwjps3oA3UfOVN4NpDXOQKWHHJ68BDhNxwDyxVBZzPITeclclbwHeCgC9g03jzqYwDOU6VJ7mkfVvAdgK5YccWsGqZ2JC0HNA2rNkCsEwslszVNizM9ABPCTbYMLSt4LLkb2K4sQV0ZS9TDD1rL9BJUJ670ljGV8XjHPJPYKtybUADuI0MOPUqIOPr+hgYBcgHQO62/w5aBA6BPvAMvE6+In1g9uzHUpB38X1sAgM+gKOk4qmANrD+J/JQfgANB//YYXlyuAAAAABJRU5ErkJggg==)"></li>
@@ -241,7 +227,7 @@
 							<br>
 							<span class="parents-font">Ibu Rani Muryani</span>
 						</p>
-						<div id="social-media-rehan">
+						<div id="social-media-amuz">
 							<ul class="fh5co-social-icons">
 								<li><a target="_blank" href="https://www.linkedin.com/in/amuzdalifa/"><i class="icon-linkedin-with-circle"></i></a></li>
 								<li><a target="_blank" href="https://www.instagram.com/amuzdalifa/"><i class="icon-instagram-with-circle"></i></a></li>
@@ -261,7 +247,7 @@
 							<br>
 							<span class="parents-font">Ibu Endah Ninik Rubianti (Almh)</span>
 						</p>
-						<div id="social-media-molid">
+						<div id="social-media-mas">
 							<ul class="fh5co-social-icons">
 								<li><a target="_blank" href="https://www.linkedin.com/in/galihendrayanas/"><i class="icon-linkedin-with-circle"></i></a></li>
 								<li><a target="_blank" href="https://www.instagram.com/galihendrayanas/"><i class="icon-instagram-with-circle"></i></a></li>
@@ -543,7 +529,7 @@
 			<div class="row copyright animate-box">
 				<div class="col-md-12 text-center">
 					<p>
-						Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+						Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kedua mempelai.
 						<br>Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
 					<h3 style="color: #bf9b73">Wassalamu'alaikum Wr. Wb.</h3>
 					Jazakumullahu Khairan
@@ -619,9 +605,30 @@
 	// 	enableUtc: false
 	// });
 
-	$('#open-invitation').click(function (){
+	var audio = new Audio('audio_file.mp3');
+	var onplay;
+
+	$('#youtube-audio1').click(function() {
+		
+		if(!audio.paused) {
+			console.log("yes")
+			$(this).html('<img src="images/audio/pause.png"/>')
+			onplay = false
+			audio.pause()
+		} else {
+			console.log("no")
+			$(this).html('<img src="images/audio/play.png"/>')
+			onplay = true
+			audio.play()
+		}
+	});
+
+
+	$('#open-invitation').click(function() {
 		$('#overlay').addClass('hide-overlay');
-		playAudio1();
+		// playAudio1();
+
+		audio.play();
 		/*yang bagian floating button ada animasinya tapi karena ketutup dulu sama overlay jadinya gak nampak*/
 		/*pengen pas di klik buka undangan baru jalan animasinya*/
 		/*var c = document.getElementsByClassName('right-sidebar');
