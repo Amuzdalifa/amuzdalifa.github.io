@@ -633,6 +633,13 @@
 
 	const urlParams = new URLSearchParams(window.location.search);
 	const to = urlParams.get('to');
+	const type= urlParams.get('p');
+
+	if (type == '1') {
+		$('#fh5co-testimonial').show();
+	} else {
+		$('#fh5co-testimonial').hide();
+	}
 	$('#id-group').html(to)
 
 
